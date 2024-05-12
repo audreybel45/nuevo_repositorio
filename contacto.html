@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Delicias Rápidas</title>
+    <link rel="stylesheet" href="assets/contacto_styles.css">
+    <script src="validacion.js"></script>
+    <!-- Añadir FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Añadir Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Añadir Bootstrap (opcional) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Contenedor principal utilizando Flexbox -->
+    <div class="container">
+        <!-- Sección de contacto -->
+        <section id="contacto">
+            <h2>Contacto <i class="far fa-envelope"></i></h2>
+            <p>Para hacer un pedido o cualquier consulta, contáctanos:</p>
+            <form action="enviar.php" method="POST" onsubmit="return validarFormulario()">
+                <div>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br>
+                </div>
+                <div>
+                    <label for="email">Correo electrónico:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                </div>
+                <div>
+                    <label for="telefono">Teléfono:</label><br>
+                    <input type="tel" id="telefono" name="telefono" required><br>
+                </div>
+                <div>
+                    <label for="consulta">Consulta:</label><br>
+                    <textarea id="consulta" name="consulta" rows="4" required></textarea><br>
+                </div>
+                <div>
+                    <label>Motivo de contacto:</label><br>
+                    <div>
+                        <input type="checkbox" id="pedido" name="motivo" value="Pedido">
+                        <label for="pedido">Pedido</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="consulta-general" name="motivo" value="Consulta General">
+                        <label for="consulta-general">Consulta General</label><br>
+                    </div>
+                </div>
+                <div>
+                    <label for="pago">Método de pago:</label><br>
+                    <select id="pago" name="pago" required>
+                        <option value="">Selecciona...</option>
+                        <option value="Efectivo">Efectivo</option>
+                        <option value="Tarjeta de crédito">Tarjeta de crédito</option>
+                        <option value="Transferencia bancaria">Transferencia bancaria</option>
+                    </select><br>
+                </div>
+                <div>
+                    <label for="adjuntar">Adjuntar imagen:</label><br>
+                    <input type="file" id="adjuntar" name="adjuntar"><br>
+                </div>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </div>
+
+  
+</body>
+</html>

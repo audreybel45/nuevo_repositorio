@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, nav {
+    padding: 20px;
+}
+
+header {
+    background-color: #8bb486;
+    color: #3f5e06;
+    text-align: center;
+}
+
+
+
+nav {
+    background-color: #306b44;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+nav a:active {
+
+transform: scale(1.1);
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+
+.main > div {
+    text-align: center; 
+}
+
+.animated-image {
+    max-width: calc(100% - 40px); 
+    border: 20px solid #000; 
+    border-radius: 25px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Sombra */
+    display: block; 
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #032e11;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+@keyframes slide {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes changeColor {
+    0%, 50% { color: #ff8080; }
+    50.1%, 100% { color: #800000; }
+}
+
+.animated {
+    animation: slide 8s linear infinite;
+    width: 100%;
+}
+
+.highlight-light {
+    animation: changeColor 8s linear infinite;
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 10px; /* Ajusta el margen de los enlaces */
+    }
+}
+
+
+/* Animación del título */
+@keyframes slide {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes changeColor {
+    0%, 50% { color: #ece4e4; } /* Rojo claro */
+    50.1%, 100% { color: #f77070; } /* Rojo oscuro */
+}
+
+.animated {
+    animation: slide 8s linear infinite;
+    width: 100%;
+}
+
+.highlight-light {
+    animation: changeColor 8s linear infinite;
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+}

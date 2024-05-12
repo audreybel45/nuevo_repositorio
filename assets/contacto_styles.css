@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e9dada; 
+}
+
+#contacto {
+    text-align: center;
+    background-color: #def7a5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+    max-width: 600px; 
+    width: 90%; 
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos para los campos del formulario */
+form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #e20c17;
+    color:black;
+    padding: 15px 30px; /* Aumenta el tamaño del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold; /* Añade negrita al texto */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra */
+}
+
+input[type="submit"]:hover {
+    background-color: #6d9b6a;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px; /* Añade espaciado alrededor del contenedor en pantallas pequeñas */
+    }
+
+    #contacto {
+        padding: 15px; /* Ajusta el espaciado interno del formulario en pantallas pequeñas */
+    }
+
+    /* Ajusta otros estilos según sea necesario */
+}
